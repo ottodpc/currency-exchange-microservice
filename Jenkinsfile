@@ -1,15 +1,3 @@
-// node {
-// 	stage('Build') {
-// 		echo "Build"
-// 	}
-// 	stage('Test') {
-// 		echo "Test"
-// 	}
-// 	stage('Integration Test') {
-// 		echo "Test"
-// 	}
-// }
-
 pipeline {
 	agent any
 	stages {
@@ -28,7 +16,9 @@ pipeline {
 				echo "Integration Test"
 			}
 		}
-	} post {
+	}
+	
+	post {
 		always {
 			echo "This will always run"
 		}
